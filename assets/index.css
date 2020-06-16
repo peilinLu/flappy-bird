@@ -1,0 +1,130 @@
+#game{
+    width: 100%;
+    height: 600px;
+    background-image: url("../img/sky.png");
+    position: relative;
+}
+
+.bird{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    margin-left: -15px;  /* 配合left用，返回宽度的一半这样就居于正中的 */
+    top: 235px;
+    background-image: url("../img/birds.png");
+}
+
+.start{
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    left: 50%;
+    margin-left: -100px;
+    top: 295px;
+    line-height: 60px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.start.start-while{
+    font-size: 24px;
+    color: #fff;
+}
+
+.start.start-blue{
+    color: #09f;
+    font-size: 36px;
+}
+
+.score{
+    position: absolute;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bolder;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mask{
+    /*技巧 由于mask没有自己的宽高，但给它设置定位，它就会自己撑开，以至于铺满整个父元素*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: .7;
+}
+
+.end{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 70px;
+    text-align: center;
+}
+
+.end .over{
+    font-size: 35px;
+    font-weight: bolder;
+    color: red;
+}
+
+.end .result,
+.end .final-score{
+    font-size: 20px;
+    color: yellow;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.end .rank-list{
+    margin-top: 20px;
+    color: #09f;
+    text-align: left; /*文本左对齐*/
+}
+
+.end .rank-item{
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    font-size: 13px;
+}
+
+.end .rank-item .rank-degree{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-color: #8eb9f5;
+    line-height: 14px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.end .rank-item .rank-degree.first{
+    background-color: #f54545;
+}
+
+.end .rank-item .rank-degree.second{
+    background-color: #ff8547;
+}
+
+.end .rank-item .rank-degree.third{
+    background-color: #ffac38;
+}
+
+.end .rank-item .rank-score{
+    display: inline-block;
+    width: 30px;
+}
+
+.end .restart{
+    font-size: 18px;
+    color: #09f;
+    font-weight: bolder;
+    cursor: pointer;;
+}
