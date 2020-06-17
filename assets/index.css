@@ -13,6 +13,7 @@
     margin-left: -15px;  /* 配合left用，返回宽度的一半这样就居于正中的 */
     top: 235px;
     background-image: url("../img/birds.png");
+    transition: top 0.3s linear;  /*动画过度*/
 }
 
 .start{
@@ -25,6 +26,8 @@
     line-height: 60px;
     text-align: center;
     font-weight: bolder;
+    transition: all .3s linear;
+    cursor: pointer;
 }
 
 .start.start-while{
@@ -44,6 +47,7 @@
     font-weight: bolder;
     left: 50%;
     transform: translateX(-50%);
+    display: none;
 }
 
 .mask{
@@ -55,6 +59,7 @@
     bottom: 0;
     background-color: #000;
     opacity: .7;
+    display: none;
 }
 
 .end{
@@ -63,6 +68,7 @@
     transform: translateX(-50%);
     top: 70px;
     text-align: center;
+    display: none;
 }
 
 .end .over{
