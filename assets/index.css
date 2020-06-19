@@ -60,6 +60,7 @@
     background-color: #000;
     opacity: .7;
     display: none;
+    z-index: 2;
 }
 
 .end{
@@ -69,6 +70,7 @@
     top: 70px;
     text-align: center;
     display: none;
+    z-index: 3;
 }
 
 .end .over{
@@ -133,4 +135,21 @@
     color: #09f;
     font-weight: bolder;
     cursor: pointer;;
+}
+
+.pipe{
+    position: absolute;
+    width: 52px;
+    /* background-color: #f54545; */
+    z-index: 1;
+}
+.pipe.pipe-up{
+    top: 0;
+    background-image: url("../img/pipe2.png");
+    /*一般图片显示都是从左上角开始，但上柱子的管口是在下面，所以要设置图片为bottom显示*/
+    background-position-y: bottom;
+}
+.pipe.pipe-bottom{
+    bottom: 0;
+    background-image: url("../img/pipe1.png");
 }
